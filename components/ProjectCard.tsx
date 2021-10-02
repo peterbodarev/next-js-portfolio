@@ -47,13 +47,17 @@ const ProjectCard: FunctionComponent<{
 					<div>
 						{/* <img src={image_path} alt={name} /> */}
 
-						<Image
+						{/* <Image
 							src={image_path}
 							alt={name}
 							layout='responsive'
 							height='150'
 							width='300'
-						/>
+						/> */}
+						<video controls poster={image_path} height='150' width='300'>
+							<source src='adaptive bike site.webm' type='video/webm' />
+							{name}
+						</video>
 						<div className='flex justify-center my-4 space-x-3'>
 							<a
 								href={github_url}
