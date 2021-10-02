@@ -1,9 +1,10 @@
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent, useContext } from 'react';
 import { AiFillGithub, AiFillProject } from 'react-icons/ai';
 import { MdClose } from 'react-icons/md';
-import { IProject } from '../types';
-
 import Image from 'next/image';
+
+import { IProject } from '../types';
+import { ShowDetailContext } from '../pages/projects';
 
 const ProjectCard: FunctionComponent<{
 	project: IProject;
@@ -18,7 +19,7 @@ const ProjectCard: FunctionComponent<{
 		key_techs,
 	},
 }) => {
-	const [showDetail, setShowDetail] = useState(false);
+	const { showDetail, setShowDetail } = useContext(ShowDetailContext);
 
 	return (
 		<div>
@@ -27,8 +28,7 @@ const ProjectCard: FunctionComponent<{
 				alt={name}
 				className='cursor-pointer'
 				onClick={() => {
-					console.log('+', name);
-					setShowDetail(true);
+					setShowDetail(name);
 				}}
 				layout='responsive'
 				height='150'
@@ -42,7 +42,7 @@ const ProjectCard: FunctionComponent<{
       /> */}
 			<p className='my-2 text-center'>{name}</p>
 
-			{showDetail && (
+			{showDetail === name && (
 				<div className='absolute left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100'>
 					<div>
 						{/* <img src={image_path} alt={name} /> */}
@@ -88,8 +88,7 @@ const ProjectCard: FunctionComponent<{
 
 					<button
 						onClick={() => {
-							console.log('-', name);
-							setShowDetail(false);
+							setShowDetail('');
 						}}
 						className='absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-dark-200'
 					>
