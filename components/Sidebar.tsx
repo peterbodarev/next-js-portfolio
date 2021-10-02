@@ -13,15 +13,24 @@ const Sidebar = () => {
 
 	return (
 		<>
-			<Image
-				src='/avatar.jpg'
-				alt='Peter Bodarev'
-				className=' mx-auto border rounded-full '
-				height='128px'
-				width='128px'
-				layout='intrinsic'
-				quality='100'
-			/>
+			<div
+				style={{
+					width: 128,
+					height: 128,
+					position: 'relative',
+					margin: 'auto',
+				}}
+			>
+				<Image
+					src='/avatar.jpg'
+					alt='Peter Bodarev'
+					className=' mx-auto border rounded-full '
+					layout='fill'
+					objectFit='cover'
+					quality='100'
+				/>
+			</div>
+
 			<h3 className='my-4 text-3xl font-medium tracking-wider font-kaushan'>
 				<span className='text-green '>Peter</span> Bodarev
 			</h3>
