@@ -1,34 +1,36 @@
-import { FunctionComponent } from "react";
-import { Category } from "../types";
+import { FunctionComponent } from 'react';
+import { Category } from '../types';
 
 export const NavItem: FunctionComponent<{
-  value: Category | "all";
-  handlerFilterCategory: Function;
-  active: string;
+	value: Category | 'All';
+	handlerFilterCategory: Function;
+	active: string;
 }> = ({ value, handlerFilterCategory, active }) => {
-  let className = "capitalize cursor-pointer hover:text-green";
-  if (active === value) className += " text-green";
+	let className = 'capitalize cursor-pointer hover:text-green';
+	if (active === value) className += ' text-green';
 
-  return (
-    <li className={className} onClick={() => handlerFilterCategory(value)}>
-      {value}
-    </li>
-  );
+	return (
+		<li className={className} onClick={() => handlerFilterCategory(value)}>
+			{value}
+		</li>
+	);
 };
 
 const ProjectsNavbar: FunctionComponent<{
-  handlerFilterCategory: Function;
-  active: string;
+	handlerFilterCategory: Function;
+	active: string;
 }> = (props) => {
-  return (
-    <div className="flex px-3 py-2 space-x-3 overflow-x-auto list-none">
-      <NavItem value="all" {...props} />
-      <NavItem value="react" {...props} />
-      <NavItem value="mongo" {...props} />
-      <NavItem value="django" {...props} />
-      <NavItem value="node" {...props} />
-    </div>
-  );
+	return (
+		<>
+			<div className='flex px-3 py-2 space-x-3 overflow-x-auto list-none'>
+				<NavItem value='All' {...props} />
+				<NavItem value='React' {...props} />
+				<NavItem value='MongoDB' {...props} />
+				<NavItem value='Express' {...props} />
+				<NavItem value='Node' {...props} />
+			</div>
+		</>
+	);
 };
 
 export default ProjectsNavbar;
