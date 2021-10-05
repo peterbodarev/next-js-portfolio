@@ -1,0 +1,200 @@
+{
+	"contactInfo": {
+		"firstName": "Peter",
+		"lastName": "Bodarev",
+		"status": "Web Developer",
+		"email": "peter.bodarev.dev@gmail.com",
+		"location": "Chisinau, Moldova",
+		"github": "link",
+		"linkedIn": "link",
+		"resumeLink": "link"
+	},
+	"siteConfig": {
+		"pages": {
+			"home": {
+				"name": "About",
+				"route": "/",
+				"type": "about",
+				"dataKey": "about"
+			},
+			"others": [
+				{
+					"name": "Resume",
+					"route": "/resume",
+					"type": "project",
+					"dataKey": "resume3",
+					"show": false
+				},
+				{
+					"name": "Awards",
+					"route": "/awards",
+					"type": "project",
+					"dataKey": "awards",
+					"show": true
+				},
+				{
+					"name": "Projects",
+					"route": "/projects",
+					"type": "project",
+					"dataKey": "project",
+					"show": true
+				}
+			]
+		}
+	},
+	"data": {
+		"project": {
+			"dataType": "github",
+			"description": "",
+			"setOfCategories": {
+				"nameForAll": "All",
+				"setArray": [
+					{
+						"setName": "Layer",
+						"nameForAllSubSets": "Layers",
+						"categories": [
+							{ "category": "Full stack", "toSearch": ["MERN"] },
+							{
+								"category": "Front-end",
+								"toSearch": [
+									"HTML5",
+									"CSS3",
+									"SASS",
+									"jQuery",
+									"JavaScript",
+									"TypeScript",
+									"React",
+									"Redux",
+									"Tailwind",
+									"Styled Components",
+									"Material UI"
+								]
+							},
+							{
+								"category": "Back-end",
+								"toSearch": ["MongoDB", "Node", "Next", "Express"]
+							}
+						]
+					},
+					{
+						"setName": "Language",
+						"nameForAllSubSets": "Languages",
+						"categories": [
+							"HTML5",
+							"CSS3",
+							"SASS",
+							"jQuery",
+							"JavaScript",
+							"TypeScript"
+						]
+					},
+					{
+						"setName": "Framework",
+						"nameForAllSubSets": "Frameworks",
+						"categories": ["React", "Redux", "Next", "Express"]
+					},
+					{
+						"setName": "Stack",
+						"nameForAllSubSets": "Stacks",
+						"categories": ["MERN"]
+					},
+					{
+						"setName": "Engine",
+						"nameForAllSubSets": "Engines",
+						"categories": ["Node"]
+					},
+					{
+						"setName": "Auth",
+						"nameForAllSubSets": "Auths",
+						"categories": ["JWT"]
+					},
+					{
+						"setName": "DB",
+						"nameForAllSubSets": "DBs",
+						"categories": ["MongoDB"]
+					},
+					{
+						"setName": "Style framework",
+						"nameForAllSubSets": "Style frameworks",
+						"categories": ["Tailwind", "Styled Components", "Material UI"]
+					},
+					{
+						"setName": "Bundler",
+						"nameForAllSubSets": "Bundlers",
+						"categories": ["Webpack", "Gulp"]
+					}
+				]
+			},
+			"allCategories": [
+				{ "simple": false, "category": "Full stack", "toSearch": ["MERN"] },
+				{
+					"simple": false,
+					"category": "Front-end",
+					"toSearch": [
+						"HTML5",
+						"CSS3",
+						"SASS",
+						"jQuery",
+						"JavaScript",
+						"TypeScript",
+						"React",
+						"Redux",
+						"Tailwind",
+						"Styled Components",
+						"Material UI"
+					]
+				},
+				{
+					"simple": false,
+					"category": "Back-end",
+					"toSearch": ["MongoDB", "Node", "Next", "Express"]
+				},
+				{ "simple": true, "category": "HTML5", "toSearch": ["html"] },
+				{ "simple": true, "category": "SASS", "toSearch": ["sass", "scss"] },
+				{ "simple": true, "category": "CSS3", "toSearch": ["css"] },
+				{
+					"category": "JavaScript",
+					"toSearch": ["javascript"]
+				},
+				{
+					"simple": true,
+					"category": "TypeScript",
+					"toSearch": ["typescript"]
+				},
+				{ "simple": true, "category": "jQuery", "toSearch": ["jquery"] },
+				{ "simple": true, "category": "React", "toSearch": ["react"] },
+				{ "simple": true, "category": "Redux", "toSearch": ["redux"] },
+				{ "simple": true, "category": "Next", "toSearch": ["next"] },
+				{ "simple": true, "category": "Express", "toSearch": ["express"] },
+				{
+					"category": "MERN",
+					"toSearch": [
+						"mern",
+						"mongoexpressreactnode",
+						"mongo-express-react-node"
+					]
+				},
+				{ "simple": true, "category": "Node", "toSearch": ["node"] },
+				{
+					"category": "JWT",
+					"toSearch": ["jwt", "jsonwebtoken", "json-web-token"]
+				},
+				{ "simple": true, "category": "MongoDB", "toSearch": ["mongo"] },
+				{ "simple": true, "category": "Tailwind", "toSearch": ["tailwind"] },
+				{
+					"simple": true,
+					"category": "Material UI",
+					"toSearch": ["materialui", "mui"]
+				},
+				{
+					"category": "Styled Components",
+					"toSearch": ["styledcomponents"]
+				},
+				{ "simple": true, "category": "Webpack", "toSearch": ["webpack"] },
+				{ "simple": true, "category": "Gulp", "toSearch": ["gulp"] }
+			],
+			"data": {}
+		},
+		"about": {}
+	}
+}
