@@ -44,156 +44,143 @@
 	},
 	"data": {
 		"project": {
-			"dataType": "github",
-			"description": "",
-			"setOfCategories": {
-				"nameForAll": "All",
-				"setArray": [
-					{
-						"setName": "Layer",
-						"nameForAllSubSets": "Layers",
-						"categories": [
-							{ "category": "Full stack", "toSearch": ["MERN"] },
-							{
-								"category": "Front-end",
-								"toSearch": [
-									"HTML5",
-									"CSS3",
-									"SASS",
-									"jQuery",
-									"JavaScript",
-									"TypeScript",
-									"React",
-									"Redux",
-									"Tailwind",
-									"Styled Components",
-									"Material UI"
-								]
-							},
-							{
-								"category": "Back-end",
-								"toSearch": ["MongoDB", "Node", "Next", "Express"]
-							}
-						]
-					},
-					{
-						"setName": "Language",
-						"nameForAllSubSets": "Languages",
-						"categories": [
-							"HTML5",
-							"CSS3",
-							"SASS",
-							"jQuery",
-							"JavaScript",
-							"TypeScript"
-						]
-					},
-					{
-						"setName": "Framework",
-						"nameForAllSubSets": "Frameworks",
-						"categories": ["React", "Redux", "Next", "Express"]
-					},
-					{
-						"setName": "Stack",
-						"nameForAllSubSets": "Stacks",
-						"categories": ["MERN"]
-					},
-					{
-						"setName": "Engine",
-						"nameForAllSubSets": "Engines",
-						"categories": ["Node"]
-					},
-					{
-						"setName": "Auth",
-						"nameForAllSubSets": "Auths",
-						"categories": ["JWT"]
-					},
-					{
-						"setName": "DB",
-						"nameForAllSubSets": "DBs",
-						"categories": ["MongoDB"]
-					},
-					{
-						"setName": "Style framework",
-						"nameForAllSubSets": "Style frameworks",
-						"categories": ["Tailwind", "Styled Components", "Material UI"]
-					},
-					{
-						"setName": "Bundler",
-						"nameForAllSubSets": "Bundlers",
-						"categories": ["Webpack", "Gulp"]
-					}
-				]
-			},
-			"allCategories": [
-				{ "simple": false, "category": "Full stack", "toSearch": ["MERN"] },
-				{
-					"simple": false,
-					"category": "Front-end",
-					"toSearch": [
-						"HTML5",
-						"CSS3",
-						"SASS",
-						"jQuery",
-						"JavaScript",
-						"TypeScript",
-						"React",
-						"Redux",
-						"Tailwind",
-						"Styled Components",
-						"Material UI"
+			"description": {},
+			"body": {
+				"template": "project",
+				"allSetsOfCategories": {
+					"nameForAll": "All",
+					"setArray": [
+						{
+							"setName": "Layer",
+							"nameForAllSubSets": "Layers",
+							"categories": ["Full stack", "Front-end", "Back-end"]
+						},
+						{
+							"setName": "Language",
+							"nameForAllSubSets": "Languages",
+							"categories": [
+								"HTML5",
+								"CSS3",
+								"SASS",
+								"jQuery",
+								"JavaScript",
+								"TypeScript"
+							]
+						},
+						{
+							"setName": "Framework",
+							"nameForAllSubSets": "Frameworks",
+							"categories": ["React", "Redux", "Next", "Express"]
+						},
+						{
+							"setName": "Stack",
+							"nameForAllSubSets": "Stacks",
+							"categories": ["MERN"]
+						},
+						{
+							"setName": "Engine",
+							"nameForAllSubSets": "Engines",
+							"categories": ["Node"]
+						},
+						{
+							"setName": "Auth",
+							"nameForAllSubSets": "Auths",
+							"categories": ["JWT"]
+						},
+						{
+							"setName": "DB",
+							"nameForAllSubSets": "DBs",
+							"categories": ["MongoDB"]
+						},
+						{
+							"setName": "Style framework",
+							"nameForAllSubSets": "Style frameworks",
+							"categories": ["Tailwind", "Styled Components", "Material UI"]
+						},
+						{
+							"setName": "Bundler",
+							"nameForAllSubSets": "Bundlers",
+							"categories": ["Webpack", "Gulp"]
+						}
 					]
 				},
-				{
-					"simple": false,
-					"category": "Back-end",
-					"toSearch": ["MongoDB", "Node", "Next", "Express"]
-				},
-				{ "simple": true, "category": "HTML5", "toSearch": ["html"] },
-				{ "simple": true, "category": "SASS", "toSearch": ["sass", "scss"] },
-				{ "simple": true, "category": "CSS3", "toSearch": ["css"] },
-				{
-					"category": "JavaScript",
-					"toSearch": ["javascript"]
-				},
-				{
-					"simple": true,
-					"category": "TypeScript",
-					"toSearch": ["typescript"]
-				},
-				{ "simple": true, "category": "jQuery", "toSearch": ["jquery"] },
-				{ "simple": true, "category": "React", "toSearch": ["react"] },
-				{ "simple": true, "category": "Redux", "toSearch": ["redux"] },
-				{ "simple": true, "category": "Next", "toSearch": ["next"] },
-				{ "simple": true, "category": "Express", "toSearch": ["express"] },
-				{
-					"category": "MERN",
-					"toSearch": [
-						"mern",
-						"mongoexpressreactnode",
-						"mongo-express-react-node"
+				"allCategories": {
+					"setOfSimple": [
+						{ "category": "Full stack", "toSearch": ["MERN"] },
+						{
+							"category": "Front-end",
+							"toSearch": [
+								"HTML5",
+								"CSS3",
+								"SASS",
+								"jQuery",
+								"JavaScript",
+								"TypeScript",
+								"React",
+								"Redux",
+								"Tailwind",
+								"Styled Components",
+								"Material UI"
+							]
+						},
+						{
+							"category": "Back-end",
+							"toSearch": ["MongoDB", "Node", "Next", "Express"]
+						}
+					],
+					"simple": [
+						{ "category": "HTML5", "toSearch": ["html"] },
+						{ "category": "SASS", "toSearch": ["sass", "scss"] },
+						{ "category": "CSS3", "toSearch": ["css"] },
+						{
+							"category": "JavaScript",
+							"toSearch": ["javascript"]
+						},
+						{
+							"category": "TypeScript",
+							"toSearch": ["typescript"]
+						},
+						{ "category": "jQuery", "toSearch": ["jquery"] },
+						{ "category": "React", "toSearch": ["react"] },
+						{ "category": "Redux", "toSearch": ["redux"] },
+						{ "category": "Next", "toSearch": ["next"] },
+						{ "category": "Express", "toSearch": ["express"] },
+						{
+							"category": "MERN",
+							"toSearch": [
+								"mern",
+								"mongoexpressreactnode",
+								"mongo-express-react-node"
+							]
+						},
+						{ "category": "Node", "toSearch": ["node"] },
+						{
+							"category": "JWT",
+							"toSearch": ["jwt", "jsonwebtoken", "json-web-token"]
+						},
+						{ "category": "MongoDB", "toSearch": ["mongo"] },
+						{ "category": "Tailwind", "toSearch": ["tailwind"] },
+						{
+							"category": "Material UI",
+							"toSearch": ["materialui", "mui"]
+						},
+						{
+							"category": "Styled Components",
+							"toSearch": ["styledcomponents"]
+						},
+						{ "category": "Webpack", "toSearch": ["webpack"] },
+						{ "category": "Gulp", "toSearch": ["gulp"] }
 					]
 				},
-				{ "simple": true, "category": "Node", "toSearch": ["node"] },
-				{
-					"category": "JWT",
-					"toSearch": ["jwt", "jsonwebtoken", "json-web-token"]
-				},
-				{ "simple": true, "category": "MongoDB", "toSearch": ["mongo"] },
-				{ "simple": true, "category": "Tailwind", "toSearch": ["tailwind"] },
-				{
-					"simple": true,
-					"category": "Material UI",
-					"toSearch": ["materialui", "mui"]
-				},
-				{
-					"category": "Styled Components",
-					"toSearch": ["styledcomponents"]
-				},
-				{ "simple": true, "category": "Webpack", "toSearch": ["webpack"] },
-				{ "simple": true, "category": "Gulp", "toSearch": ["gulp"] }
-			],
-			"data": {}
+				"inputData": {
+					"dataType": "fetchGithub",
+					"githubReadmeUrls": [
+						"https://github.com/peterbodarev/burger-menu/blob/master/README.md",
+						"https://github.com/peterbodarev/gulp-config/blob/master/README.md",
+						"https://github.com/peterbodarev/full-screen-blocks-with-parallax/blob/master/README.md"
+					]
+				}
+			}
 		},
 		"about": {}
 	}
