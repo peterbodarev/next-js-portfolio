@@ -1,4 +1,4 @@
-import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { GiTie } from 'react-icons/gi';
 import { GoLocation } from 'react-icons/go';
 import { useTheme } from 'next-themes';
@@ -33,7 +33,10 @@ const Sidebar = () => {
 				/>
 			</div>
 
-			<h3 className='my-4 text-3xl font-medium tracking-wider font-kaushan'>
+			<h3
+				className='my-4 text-3xl font-medium tracking-wider font-kaushan'
+				style={{ wordWrap: 'break-word' }}
+			>
 				<span className='text-green '>{contactInfo.firstName}</span>
 				{contactInfo.lastName}
 			</h3>
@@ -52,10 +55,10 @@ const Sidebar = () => {
 
 			{/* Socials */}
 			<div className='flex justify-around w-9/12 mx-auto my-5 text-green md:w-full '>
-				<a href={contactInfo.linkedIn}>
+				<a target='_blank' href={contactInfo.linkedIn}>
 					<AiFillLinkedin className='w-8 h-8 cursor-pointer' />
 				</a>
-				<a href={contactInfo.github}>
+				<a target='_blank' href={contactInfo.github}>
 					<AiFillGithub className='w-8 h-8 cursor-pointer' />
 				</a>
 			</div>

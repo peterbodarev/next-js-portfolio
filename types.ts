@@ -12,6 +12,44 @@ export interface Skill {
 	level: string;
 }
 
+export interface Education {
+	status: string;
+	period: string;
+	specialty: string;
+	university: string;
+	university_url: string;
+}
+
+export interface Ability {
+	name: string;
+	level: string;
+}
+
+export interface Abilities {
+	group_name: string;
+	list_of_abilities: Ability[];
+}
+
+export interface Job {
+	name: string;
+	description: string;
+	image_path: string;
+	company_name: string;
+	company_url: string;
+	jobPositions: string[];
+	responsibilities: string[];
+	improvedSills: string[];
+}
+
+export interface Award {
+	short_name: string;
+	long_name: string;
+	description: string;
+	image_path: string;
+	event_page_url: string;
+	category: string[];
+}
+
 export interface IProject {
 	name: string;
 	description: string;

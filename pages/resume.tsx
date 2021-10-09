@@ -1,56 +1,56 @@
-import Bar from "../components/Bar";
-import { languages, tools } from "../data";
+import { BsCircleFill } from 'react-icons/bs';
+
+import Bar from '../components/Bar';
+import { Abilities, Ability, Education } from '../types';
 
 const Resume = () => {
-  return (
-    <div className="px-6 py-2">
-      {/* //! Education & Experience */}
-      <div className="grid gap-6 md:grid-cols-2">
-        <div>
-          <h5 className="my-3 text-2xl font-bold">Education</h5>
-          <div className="">
-            <h5 className="my-2 text-xl font-bold">
-              Computer Science Engineering
-            </h5>
-            <p className="font-semibold">Academy of Technology (2017-2021)</p>
-            <p className="my-3">
-              I am currently pursuing B.tech in Computer Science Engineering
-              from Academy of Technology
-            </p>
-          </div>
-        </div>
-        <div>
-          <h5 className="my-3 text-2xl font-bold">Experience</h5>
-          <div className="">
-            <h5 className="my-2 text-xl font-bold">Software Developer Jr.</h5>
-            <p className="font-semibold">Tata Consultancy Services</p>
-            <p className="my-3">I don't know why I am doing this job</p>
-          </div>
-        </div>
-      </div>
+	const { siteConfig } = require('../data/fetchedData.json');
+	const descriptionData = siteConfig.pages.resume.data.description;
+	const bodyData = siteConfig.pages.resume.data.body;
+	const descriptionItems = descriptionData.items;
+	const abilitiesData = bodyData.abilities;
 
-      {/*Languages & Tools */}
-      <div className="grid gap-9 md:grid-cols-2">
-        <div>
-          <h5 className="my-3 text-2xl font-bold">Language & Framework</h5>
-          <div className="my-2">
-            {languages.map((language, i) => (
-              <Bar value={language} key={i} />
-            ))}
-          </div>
-        </div>
+	return (
+		<div className='px-6 py-2'>
+			{/* Education */}
+			<div className='grid gap-2 md:grid-cols-2'>
+				{descriptionItems.map((education: Education, i) => (
+					<div key={i}>
+						<div className=''>
+							<h5 className='my-1 text-xl font-bold'>
+								{education.status}
+								<small>{` ${education.period}`}</small>
+							</h5>
 
-        <div>
-          <h5 className="my-3 text-2xl font-bold">Tools & Softwares</h5>
-          <div className="my-2">
-            {tools.map((tool, i) => (
-              <Bar value={tool} key={i} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+							<p className='font-semibold'>{education.specialty}</p>
+							<a
+								target='_blank'
+								href={education.university_url}
+								className='my-3'
+								style={{ color: '#00BA37' }}
+							>
+								{education.university}
+							</a>
+						</div>
+					</div>
+				))}
+			</div>
+
+			{/* Abilities */}
+			<div className='grid gap-2 md:grid-cols-2'>
+				{abilitiesData.map((abilityGroup: Abilities, i) => (
+					<div key={i}>
+						<h6 className='text-2xl font-bold'>{abilityGroup.group_name}</h6>
+						<div>
+							{abilityGroup.list_of_abilities.map((ability: Ability, i) => (
+								<Bar value={{ Icon: BsCircleFill, ...ability }} key={i} />
+							))}
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	);
 };
 
 export default Resume;

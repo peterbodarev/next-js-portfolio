@@ -4,7 +4,7 @@ import { MdClose } from 'react-icons/md';
 import Image from 'next/image';
 
 import { IProject } from '../types';
-import { ShowDetailContext } from '../pages/projects';
+import { ShowProjectDetailContext } from '../pages/projects';
 
 const ProjectCard: FunctionComponent<{
 	project: IProject;
@@ -19,14 +19,14 @@ const ProjectCard: FunctionComponent<{
 		key_techs,
 	},
 }) => {
-	const { showDetail, setShowDetail } = useContext(ShowDetailContext);
+	const { showDetail, setShowDetail } = useContext(ShowProjectDetailContext);
 
 	return (
 		<div>
 			<Image
 				src={image_path}
 				alt={name}
-				className='cursor-pointer'
+				className='cursor-pointer object-cover'
 				onClick={() => {
 					setShowDetail(name);
 				}}
@@ -34,12 +34,6 @@ const ProjectCard: FunctionComponent<{
 				height='150'
 				width='300'
 			/>
-			{/* <img
-        src={image_path}
-        alt={name}
-        className="cursor-pointer"
-        onClick={() => setShowDetail(true)}
-      /> */}
 			<p className='my-2 text-center'>{name}</p>
 
 			{showDetail === name && (
@@ -60,12 +54,14 @@ const ProjectCard: FunctionComponent<{
 						</video>
 						<div className='flex justify-center my-4 space-x-3'>
 							<a
+								target='_blank'
 								href={github_url}
 								className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200'
 							>
 								<AiFillGithub /> <span>Github</span>
 							</a>
 							<a
+								target='_blank'
 								href={deployed_url}
 								className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200'
 							>

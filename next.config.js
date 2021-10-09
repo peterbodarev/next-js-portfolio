@@ -1,5 +1,5 @@
 module.exports = {
-  images: {
-    domains: ["sumitdey.netlify.app"],
-  },
+	images: {
+		domains: ['assets.vercel.com'],
+	},
 };

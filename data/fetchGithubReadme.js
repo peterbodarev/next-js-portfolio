@@ -1,3 +1,51 @@
+/* import fetchGithubReadme from '../data/fetchGithubReadme';
+
+const configFile = require('../data/fetchedData.json');
+const projectBody = configFile.data.project.body;
+
+let readmeApiURLs = [];
+let githubProjectURLs = [];
+
+projectBody.inputData.githubReadmeUrls.map((url: string) => {
+	const readmeApiURL = url
+		.replace('https://github.com', 'https://raw.githubusercontent.com')
+		.replace('/blob', '');
+	const githubProjectURL = url.split('/blob/')[0];
+
+	readmeApiURLs.push(readmeApiURL);
+	githubProjectURLs.push(githubProjectURL);
+});
+
+let currentData = new Map();
+function addNewData(
+	key: string,
+	readmeText: string,
+	destinationMap: Map<string, Object>,
+	projectData?: Object
+) {
+	destinationMap.set(key, {
+		projectData: projectData,
+		readmeText: readmeText,
+	});
+}
+
+readmeApiURLs.map((url: string) => {
+	addNewData(url, '', currentData);
+});
+
+const receiveNewProjectData = (url, newData) => {
+	currentData.set(url, newData);
+};
+
+fetchGithubReadme(
+	currentData,
+	projectBody.allCategories.simple,
+	projectBody.allCategories.setOfSimple,
+	receiveNewProjectData
+);
+
+let currentReadmeText = []; */
+
 export default function fetchGithubReadme(
 	dataMap = new Map(),
 	allSimpleCategories = [],

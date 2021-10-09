@@ -1,48 +1,57 @@
 import {
-  GetServerSideProps,
-  GetServerSidePropsContext,
-  GetStaticProps,
-  GetStaticPropsContext,
-  NextPage,
-} from "next";
-import ServiceCard from "../components/ServiceCard";
-import { services } from "../data";
-import { Service } from "../types";
+	GetServerSideProps,
+	GetServerSidePropsContext,
+	GetStaticProps,
+	GetStaticPropsContext,
+	NextPage,
+} from 'next';
+import { createContext, useState } from 'react';
+
+import JobCard from '../components/JobCard';
+import { Job } from '../types';
+
+export const ShowJobDetailContext = createContext(null);
 
 const About: NextPage = () => {
-  // console.log(services);
+	const { siteConfig } = require('../data/fetchedData.json');
+	const bodyData = siteConfig.pages.about.data.body;
+	const descriptionData = siteConfig.pages.about.data.description;
+	const descriptionItems = descriptionData.items;
+	const jobs = bodyData.jobs;
 
-  return (
-    <div className="flex flex-col flex-grow px-6 pt-1 ">
-      <h6 className="my-3 text-base font-medium">
-        I am currently pursuing B.Tech Degree(Final Year) in Computer Science
-        Engineering from Academy of Technology. I have 3+ years of experience in
-        Web Development and I have a Youtube Channel where I teach Full Stack
-        Web Development
-      </h6>
-      <div
-        className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100 "
-        style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
-      >
-        <h4 className="my-3 text-xl font-semibold tracking-wide">
-          What I am doing
-        </h4>
+	const [showDetail, setShowDetailState] = useState('');
+	function setShowDetail(jobName: string) {
+		setShowDetailState((showDetail) => jobName);
+	}
 
-        <div className="grid gap-6 my-3 md:grid-cols-2">
-          {/* children's initial and animate property should be same as the parent during a stagger effect  */}
-          {services.map((service) => (
-            <div
-              className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1 "
-              key={service.title}
-            >
-              <ServiceCard service={service} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className='flex flex-col flex-grow px-6 pt-1 '>
+			{descriptionItems?.length &&
+				descriptionItems.map(([descTitle, descText], i) => (
+					<h6 key={i} className='my-1 text-base font-medium'>
+						<b>{descTitle}</b>
+						{descText}
+					</h6>
+				))}
+			<div className='px-3 py-2 overflow-y-scroll' style={{ height: '40vh' }}>
+				<ShowJobDetailContext.Provider value={{ showDetail, setShowDetail }}>
+					<div className='relative grid grid-cols-12 gap-4 my-3'>
+						{jobs.map((job: Job) => (
+							<div
+								className='col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200'
+								key={job.name}
+							>
+								<JobCard job={job} />
+							</div>
+						))}
+					</div>
+				</ShowJobDetailContext.Provider>
+			</div>
+		</div>
+	);
 };
+
+export default About;
 
 //!called every time  the page refreshed
 // export const getServerSideProps: GetServerSideProps = async (
@@ -69,5 +78,3 @@ const About: NextPage = () => {
 //    console.log({ services })
 //    return { props: { services: services } }
 // }
-
-export default About;
