@@ -3,15 +3,16 @@ import { AiFillGithub, AiFillProject } from 'react-icons/ai';
 import { MdClose } from 'react-icons/md';
 import Image from 'next/image';
 
-import { IProject } from '../types';
+import { Project } from '../types';
 import { ShowProjectDetailContext } from '../pages/projects';
 
 const ProjectCard: FunctionComponent<{
-	project: IProject;
+	project: Project;
 }> = ({
 	project: {
 		name,
 		image_path,
+		video_path,
 		category,
 		deployed_url,
 		description,
@@ -39,19 +40,22 @@ const ProjectCard: FunctionComponent<{
 			{showDetail === name && (
 				<div className='absolute left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100'>
 					<div>
-						{/* <img src={image_path} alt={name} /> */}
+						{video_path ? (
+							<video controls poster={image_path} height='150' width='300'>
+								<source src={video_path} type='video/mp4' />
+								{name}
+							</video>
+						) : (
+							<Image
+								src={image_path}
+								alt={name}
+								className='object-cover'
+								layout='responsive'
+								height='200'
+								width='300'
+							/>
+						)}
 
-						{/* <Image
-							src={image_path}
-							alt={name}
-							layout='responsive'
-							height='150'
-							width='300'
-						/> */}
-						<video controls poster={image_path} height='150' width='300'>
-							<source src='adaptive bike site.webm' type='video/webm' />
-							{name}
-						</video>
 						<div className='flex justify-center my-4 space-x-3'>
 							<a
 								target='_blank'
@@ -60,13 +64,15 @@ const ProjectCard: FunctionComponent<{
 							>
 								<AiFillGithub /> <span>Github</span>
 							</a>
-							<a
-								target='_blank'
-								href={deployed_url}
-								className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200'
-							>
-								<AiFillProject /> <span>Project</span>
-							</a>
+							{deployed_url && (
+								<a
+									target='_blank'
+									href={deployed_url}
+									className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200'
+								>
+									<AiFillProject /> <span>Project</span>
+								</a>
+							)}
 						</div>
 					</div>
 

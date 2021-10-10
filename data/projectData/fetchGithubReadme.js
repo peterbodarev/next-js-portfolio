@@ -46,20 +46,16 @@ fetchGithubReadme(
 
 let currentReadmeText = []; */
 
+import { callbackify } from 'util';
+
 export default function fetchGithubReadme(
-	dataMap = new Map(),
+	readmeApiUrls = [],
 	allSimpleCategories = [],
 	allSetsOfSimpleCategories = [],
-	postNewProjectData = (url, value) => {}
+	allSetsOfCategories = [],
+	getData
 ) {
-	let projectDataArray = [];
-	let fetchedReadmeTextArray = [];
-
-	let onlyChangedData = new Map();
-	/* {
-		projectData: projectData,
-		readmeText: readmeText,
-	} */
+	let fetchedProjectData = [];
 
 	function findProjectCategories(allCategories = [], keyTechs = []) {
 		let foundCategories = [];
@@ -83,12 +79,32 @@ export default function fetchGithubReadme(
 		// console.log(keyTechs, foundCategories);
 		return foundCategories;
 	}
+	function findSetOfSimpleCategories(
+		allCategories = [],
+		keyTechs = [],
+		projectName = ''
+	) {
+		let foundCategories = [];
+		allCategories.map((setOfCategories) => {
+			if (setOfCategories.ignore?.includes(projectName)) {
+				// console.log(setOfCategories, projectName);
+				return;
+			}
+			for (let cat of keyTechs) {
+				if (setOfCategories.toSearch.find((catInSet) => catInSet === cat)) {
+					foundCategories.push(setOfCategories.category);
+					break;
+				}
+			}
+		});
+		return foundCategories;
+	}
 	function findSetOfCategories(allCategories = [], keyTechs = []) {
 		let foundCategories = [];
 		allCategories.map((setOfCategories) => {
 			for (let cat of keyTechs) {
-				if (setOfCategories.toSearch.find((catInSet) => catInSet === cat)) {
-					foundCategories.push(setOfCategories.category);
+				if (setOfCategories.categories.find((catInSet) => catInSet === cat)) {
+					foundCategories.push(setOfCategories.setName);
 					break;
 				}
 			}
@@ -99,8 +115,11 @@ export default function fetchGithubReadme(
 	const getProjectSimpleCategories = (keyTechs = []) =>
 		findProjectCategories(allSimpleCategories, keyTechs);
 
-	const getProjectSetOfSimpleCategories = (keyTechs = []) =>
-		findSetOfCategories(allSetsOfSimpleCategories, keyTechs);
+	const getProjectSetOfSimpleCategories = (keyTechs = [], projectName = '') =>
+		findSetOfSimpleCategories(allSetsOfSimpleCategories, keyTechs, projectName);
+
+	const getProjectSetOfCategories = (keyTechs = []) =>
+		findSetOfCategories(allSetsOfCategories, keyTechs);
 
 	function getProjectData(readmeText) {
 		const readmeArray = readmeText.split('##');
@@ -138,7 +157,8 @@ export default function fetchGithubReadme(
 			.replace(' Description\n\n', '')
 			.replace('\n\n', '');
 
-		const examplesArray = readmeArray[2].split('\n\n');
+		// const examplesArray = readmeArray[2].split('\n\n');
+		const examplesArray = readmeArray[2].split('\n');
 
 		// get first image url
 		for (let el of examplesArray) {
@@ -169,43 +189,47 @@ export default function fetchGithubReadme(
 
 		// get Simple categories
 		projectObj.category.push(
-			...getProjectSetOfSimpleCategories(projectObj.category)
+			...getProjectSetOfSimpleCategories(projectObj.category, projectObj.name)
 		);
+
+		// get sets of categories
+		projectObj.category.push(...getProjectSetOfCategories(projectObj.category));
 
 		// console.log(projectObj.name, projectObj.category);
 		return projectObj;
 	}
 
-	async function fetchReadme(url) {
+	async function fetchReadme(url, i, callback) {
 		fetch(url)
 			.then((response) => response.text())
 			.then((data) => {
 				const fetchedText = data.split('## Features 💡')[0];
-				if (fetchedText !== dataMap.get(url)) {
-					const newProjectData = getProjectData(fetchedText);
-					// console.log(newProjectData);
-					/* onlyChangedData.set(url, {
-						projectData: newProjectData,
-						readmeText: fetchedText,
-					}); */
-					postNewProjectData(url, {
-						projectData: newProjectData,
-						readmeText: fetchedText,
-					});
-				}
-
-				// return;
 				// console.log(fetchedText);
-				// fetchedReadmeTextArray.push(fetchedText);
-				//todo: add logic to not process if readme is the same with lastReadme
-				// processReadme(fetchedText);
+				const newProjectData = getProjectData(fetchedText);
+
+				fetchedProjectData.push(newProjectData);
+				if (fetchedProjectData.length === readmeApiUrls.length) {
+					callback(fetchedProjectData);
+					// console.log('last fetched project ', newProjectData.name);
+				}
+				// console.log(i, newProjectData.name, newProjectData.category);
+				// return;
 			});
 	}
+	// readmeApiUrls.map((url, i) => fetchReadme(url, i + 1));
 
-	for (let readmeApiUrls of dataMap.keys()) {
+	readmeApiUrls.map((url, i) => {
+		fetchReadme(url, i + 1, getData);
+	});
+
+	// console.log(fetchedProjectData.length);
+	// console.log(1);
+	// fetchReadme(readmeApiUrls[0]);
+
+	/* for (let readmeApiUrls of dataMap.keys()) {
 		fetchReadme(readmeApiUrls);
 		// console.log(readmeApiUrls);
-	}
+	} */
 
 	// return onlyChangedData;
 	// return new Map();

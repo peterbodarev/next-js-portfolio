@@ -309,7 +309,11 @@
 						},
 						"allCategories": {
 							"setOfSimple": [
-								{ "category": "Full stack", "toSearch": ["MERN", "Next"] },
+								{
+									"category": "Full stack",
+									"toSearch": ["MERN", "Next"],
+									"ignore": []
+								},
 								{
 									"category": "Front-end",
 									"toSearch": [
@@ -324,11 +328,13 @@
 										"Tailwind",
 										"Styled Components",
 										"Material UI"
-									]
+									],
+									"ignore": ["Gulp config", "Webpack with gulp config"]
 								},
 								{
 									"category": "Back-end",
-									"toSearch": ["MongoDB", "Node", "Next", "Express"]
+									"toSearch": ["MongoDB", "Node", "Next", "Express"],
+									"ignore": ["Gulp config", "Webpack with gulp config"]
 								}
 							],
 							"simple": [
@@ -353,6 +359,7 @@
 									"toSearch": [
 										"mern",
 										"mongoexpressreactnode",
+										"mongo,express,react,node",
 										"mongo-express-react-node"
 									]
 								},
@@ -377,9 +384,38 @@
 						},
 						"inputData": {
 							"githubReadmeUrls": [
-								"https://github.com/peterbodarev/burger-menu/blob/master/README.md",
+								"https://github.com/peterbodarev/sweet-memories/blob/master/README.md",
+								"https://github.com/peterbodarev/agency/blob/master/README.md",
+
+								"https://github.com/peterbodarev/webpack-with-gulp-config/blob/master/README.md",
 								"https://github.com/peterbodarev/gulp-config/blob/master/README.md",
-								"https://github.com/peterbodarev/full-screen-blocks-with-parallax/blob/master/README.md"
+
+								"https://github.com/peterbodarev/full-screen-adaptive-site/blob/master/README.md",
+								"https://github.com/peterbodarev/animate-blocks-in-viewport/blob/master/README.md",
+								"https://github.com/peterbodarev/img-map-content-lazy-loaded/blob/master/README.md",
+								"https://github.com/peterbodarev/Matthew-Wagnerfield-parallax/blob/master/README.md",
+								"https://github.com/peterbodarev/Mountain-parallax/blob/master/README.md",
+								"https://github.com/peterbodarev/parallax-on-scroll-and-mousemove/blob/master/README.md",
+								"https://github.com/peterbodarev/slick-slider-gallery/blob/master/README.md",
+								"https://github.com/peterbodarev/swiper-slider-full-screen-page-navigation/blob/master/README.md",
+
+								"https://github.com/peterbodarev/burger-menu/blob/master/README.md",
+								"https://github.com/peterbodarev/dropdown-menu/blob/master/README.md",
+								"https://github.com/peterbodarev/cross-device-js-burger-menu/blob/master/README.md",
+								"https://github.com/peterbodarev/popups-js-and-nojs-versions/blob/master/README.md",
+								"https://github.com/peterbodarev/simple-and-media-spoilers/blob/master/README.md",
+
+								"https://github.com/peterbodarev/full-screen-blocks-with-parallax/blob/master/README.md",
+								"https://github.com/peterbodarev/html-css-browser-game/blob/master/README.md",
+
+								"https://github.com/peterbodarev/html-block-out-of-container/blob/master/README.md",
+								"https://github.com/peterbodarev/button-freedom/blob/master/README.md",
+								"https://github.com/peterbodarev/circular-html-css-timer/blob/master/README.md",
+								"https://github.com/peterbodarev/how-to-use-images-on-site/blob/master/README.md",
+								"https://github.com/peterbodarev/responsive-site-using-flexbox/blob/master/README.md",
+								"https://github.com/peterbodarev/responsive-site-using-grid/blob/master/README.md",
+								"https://github.com/peterbodarev/ways-to-use-videos-on-site/blob/master/README.md",
+								"https://github.com/peterbodarev/wave-button/blob/master/README.md"
 							]
 						}
 					}

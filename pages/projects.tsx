@@ -1,12 +1,29 @@
 import { createContext, useState } from 'react';
 import ProjectCard from '../components/ProjectCard';
 import ProjectsNavbar from '../components/ProjectsNavbar';
-import { projects as projectsData } from '../data';
+// import { projects as projectsData } from '../data';
 import { Category } from '../types';
+
+// import getProjectData from '../data/projectData/getProjectData';
+import generateFinalProjectData from '../data/projectData/generateFinalProjectData';
 
 export const ShowProjectDetailContext = createContext(null);
 
 const Projects = () => {
+	// getProjectData();
+
+	let projectsData = [];
+
+	// const callback = (data) => console.log(data);
+	const callback = (data) => {
+		/* data.map((prj, i) => {
+			if (prj.image_path === '') console.log(i, prj.name, prj.image_path);
+		}); */
+		projectsData.push(...data);
+	};
+	generateFinalProjectData(callback);
+
+	/*	------------------------------------------- */
 	const [projects, setProjects] = useState(projectsData);
 	const [active, setActive] = useState('All');
 
