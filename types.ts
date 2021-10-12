@@ -1,3 +1,10 @@
+import { IconType } from 'react-icons';
+
+export interface Skill {
+	Icon: IconType;
+	name: string;
+	level: string;
+}
 export interface ContactInfo {
 	firstName: string;
 	lastName: string;
@@ -88,7 +95,7 @@ export interface ProjectCategory {
 export interface SetOfProjectCategory {
 	category: string;
 	toSearch: string[];
-	ignoreProjectWithName: string[] | [];
+	ignoreProjectWithName: string[];
 }
 
 export interface ProjectNavLink {

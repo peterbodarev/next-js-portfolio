@@ -2,11 +2,11 @@ import { FunctionComponent, useContext } from 'react';
 import { MdClose } from 'react-icons/md';
 import Image from 'next/image';
 
-import { Jobs } from '../types';
+import { Job } from '../types';
 import { ShowJobDetailContext } from '../pages/index';
 
 const JobCard: FunctionComponent<{
-	job: Jobs;
+	job: Job;
 }> = ({
 	job: {
 		name,

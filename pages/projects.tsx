@@ -5,7 +5,7 @@ import ProjectsNavbar from '../components/ProjectsNavbar';
 import { ProjectsSubNavbar } from '../components/ProjectsNavbar';
 import getNavLinks from '../data/projectData/getNavLinks';
 import readmeText_to_projectData from '../data/projectData/readmeTextProcessing';
-import { Project, ProjectsPageData } from '../types';
+import { Project, ProjectNavLink, ProjectsPageData } from '../types';
 
 export const ShowProjectDetailContext = createContext(null);
 
@@ -93,7 +93,7 @@ export async function getStaticProps() {
 		allNavLinks,
 	} = projectInitialData;
 
-	const projectDataPromise = Promise.all(
+	const projectDataPromise = Promise.all<Project>(
 		githubReadmeUrls.map(async (url: string) => {
 			const readmeApiURL = url
 				.replace('https://github.com', 'https://raw.githubusercontent.com')
