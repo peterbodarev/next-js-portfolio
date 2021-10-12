@@ -45,12 +45,12 @@ const Sidebar = (contactInfo: ContactInfo) => {
 			</p>
 			{/* Resume */}
 			<a
-				href='/Resume.pdf'
-				download={`${contactInfo.firstName} ${contactInfo.lastName} Resume.pdf`}
+				href={contactInfo.resumeLink}
+				target='_blank'
 				className='flex items-center justify-center px-2 py-1 my-2 bg-gray-200 rounded-full cursor-pointer dark:bg-dark-200 dark:bg-black-500'
 			>
 				<GiTie className='w-6 h-6' />
-				<span>Download Resume</span>
+				<span>Resume</span>
 			</a>
 
 			{/* Socials */}
