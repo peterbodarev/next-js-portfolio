@@ -1,0 +1,83 @@
+{
+	"mainNavItems": [
+		"Problem solving",
+		"Science",
+		"Innovation",
+		"Olympic",
+		"Programming"
+	],
+	"awardList": [
+		{
+			"short_name": "gold medal at INFOINVENT",
+			"long_name": "AGEPI award and the gold medal at INFOINVENT 2019",
+			"description": "As a researcher in a team of NCMST was obtained the AGEPI award “Best project made by young people” and the gold medal of the Institute of Laser, Plasma and Physics Radiation in Bucharest, Romania, during the International Specialized Exhibition INFOINVENT 2019 for the project “Elaboration of surfaces with controlled degree of hydrophobicity due to nano-microstructuring. 19.80012.50.03A\". November 2019",
+			"image_path": "/images/awards/agepi.png",
+			"event_page_url": "https://utm.md/en/blog/2019/11/24/the-inventions-of-utm-awarded-at-infoinvent-2019/",
+			"category": ["Problem solving", "Science", "Innovation"]
+		},
+		{
+			"short_name": "3rd g. at Tech-Sci Conference",
+			"long_name": "3rd grade at the Technical-Scientific Conference",
+			"description": "Diploma of 3rd grade at the Technical-Scientific Conference of Students, Masters and PhD students, March 2019",
+			"image_path": "/images/awards/conf.jpg",
+			"event_page_url": "https://ibn.idsi.md/en/vizualizare_articol/84669",
+			"category": ["Problem solving", "Science"]
+		},
+		{
+			"short_name": "Fair Medal at INVENT – INVEST",
+			"long_name": "Jury Prize winner and Fair Medal at INVENT – INVEST 2017",
+			"description": "Jury Prize winner and Fair Medal at the International Fair of Inventions and Business Ideas - 2017, Ungheni - Romania - Moldova, INVENT – INVEST 2017, for invention: \"Cargo effect micromotors based on networks of nanotubes\". November 2017",
+			"image_path": "/images/awards/sir.jpg",
+			"event_page_url": "https://edu.asm.md/md/noutate/targul-international-invent-invest-2017",
+			"category": ["Problem solving", "Science", "Innovation"]
+		},
+		{
+			"short_name": "International workshop in Turkey",
+			"long_name": "IWANN-7 international workshop in Ankara, Turkey",
+			"description": "Participation in the IWANN-7 international workshop in Ankara, Turkey, July 2017 International Workshop on Applications of Nanoscience and Nanotechnology (IWANN)",
+			"image_path": "/images/awards/iwann.jpg",
+			"event_page_url": "http://imd.kpi.ua/iwann-2017-ankara-turkey-2/",
+			"category": ["Problem solving", "Science"]
+		},
+		{
+			"short_name": "Mention at Math Olympiad",
+			"long_name": "Mention at the Mathematics Students Olympiad",
+			"description": "Mention diploma at the Mathematics Students Olympiad, March 2017",
+			"image_path": "/images/awards/math.jpg",
+			"event_page_url": "",
+			"category": ["Problem solving", "Olympic"]
+		},
+		{
+			"short_name": "4th place in programming contest",
+			"long_name": "4th place in the SAP ABAP programming contest",
+			"description": "4th place in the SAP ABAP programming contest organized by Crystal System Moldova, December 2016",
+			"image_path": "/images/awards/abap.jpg",
+			"event_page_url": "https://www.facebook.com/CrystalSystemMD/posts/1782000128726955",
+			"category": ["Problem solving", "Programming"]
+		},
+		{
+			"short_name": "3rd g. at Republican Physics Olympiad",
+			"long_name": "3rd grade at the Republican Physics Olympiad",
+			"description": "Diploma of 3rd grade at the Republican Physics Olympiad (12th class)",
+			"image_path": "/images/awards/12_fiz.jpg",
+			"event_page_url": "",
+			"category": ["Problem solving", "Olympic"]
+		},
+		{
+			"short_name": "Best Innovative Student",
+			"long_name": "Special Award “Best Innovative Student”",
+			"description": "Special Award “Best Innovative Student” 7th edition, 2014 (10th class)",
+			"image_path": "/images/awards/inovstudent.jpg",
+			"event_page_url": "http://agepi.gov.md/en/news/there-were-designated-winners-national-contest-%E2%80%9Cbest-innovative-pupil%E2%80%9D-seventh-edition",
+			"category": ["Problem solving", "Innovation"]
+		},
+		{
+			"short_name": "mention at Republican Physics Olympiad",
+			"long_name": "mention at the Republican Physics Olympiad",
+			"description": "Diploma of mention at the Republican Physics Olympiad (10th class)",
+			"image_path": "/images/awards/10_fiz.jpg",
+			"event_page_url": "",
+			"category": ["Problem solving", "Olympic"]
+		}
+	]
+}

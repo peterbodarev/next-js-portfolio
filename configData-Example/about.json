@@ -1,0 +1,67 @@
+{
+	"descriptionItems": [
+		[
+			"",
+			"An ambitious and fast learning problem solver with a passion forsoftware development, able to create innovative, optimized and userenjoyable solutions for web problem."
+		],
+		[
+			"Skills",
+			" of analysis, critical thinking, research and optimization,result oriented, adaptability, pro activity, attention to detail,communication, presentation, teamwork ability, mentoring,responsibility, optimism, self-learning and independency."
+		],
+		[
+			"Objectives:",
+			" Seeking a career which is intellectually challenging and financially rewarding with excellent opportunities for advancement where I can maximize my skills and development by providing web solutions for businesses."
+		],
+		["", "PROFESSIONAL EXPERIENCE:"]
+	],
+	"jobs": [
+		{
+			"name": "Scientific research",
+			"description": "period: 3.5 years",
+			"image_path": "/images/work/ncmst.jpg",
+			"company_name": "National Center of Material Study and Testing",
+			"company_url": "http://www.ncmst.utm.md/",
+			"jobPositions": [
+				"Engineer coordinator (2018–2020)",
+				"Engineer assistant (2017 –2018)"
+			],
+			"responsibilities": [
+				"data analysis, performing and optimizing technological processes, systematizing processes and results presentation",
+				"training other colleagues"
+			],
+			"improvedSills": [
+				"analysis",
+				"research",
+				"optimization",
+				"problem solving",
+				"presentation",
+				"responsibility",
+				"teamwork ability"
+			]
+		},
+		{
+			"name": "Seller consultant",
+			"description": "period: 1 years",
+			"image_path": "/images/work/maximum.jpg",
+			"company_name": "MAXIMUM",
+			"company_url": "https://maximum.md/ro/ ",
+			"jobPositions": [
+				"Hall sales consultant (2020-2021)",
+				"Online seller (2020)"
+			],
+			"responsibilities": [
+				"Establishing customers relationships",
+				"Identifying potential customers and reasoned formulation of the offer to cover their needs by choosing the optimal product"
+			],
+			"improvedSills": [
+				"communication",
+				"presentation",
+				"negotiation",
+				"client oriented",
+				"attention to detail",
+				"teamwork ability ",
+				"responsibility"
+			]
+		}
+	]
+}

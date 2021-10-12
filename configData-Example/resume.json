@@ -1,0 +1,55 @@
+{
+	"descriptionItems": [
+		{
+			"status": "Master's student",
+			"period": "(2020–present)",
+			"specialty": "Business Administration",
+			"university": "Academy of Economic Studies of Moldova ",
+			"university_url": "https://ase.md/"
+		},
+		{
+			"status": "Bachelor of Engineering",
+			"period": "(2016–2020)",
+			"specialty": "Microelectronics and Nanotechnologies",
+			"university": "Technical University of Moldova",
+			"university_url": "https://utm.md/en/"
+		}
+	],
+	"abilities": [
+		{
+			"group_name": "Native languages",
+			"list_of_abilities": [
+				{ "name": "Romanian", "level": 90 },
+				{ "name": "Russian", "level": 90 }
+			]
+		},
+		{
+			"group_name": "Foreign languages",
+			"list_of_abilities": [
+				{ "name": "English", "level": 60 },
+				{ "name": "French", "level": 50 }
+			]
+		},
+		{
+			"group_name": "Language & Framework",
+			"list_of_abilities": [
+				{ "name": "HTML, CSS, SCSS", "level": 90 },
+				{ "name": "JavaScript, TypeScript", "level": 80 },
+				{ "name": "React", "level": 70 },
+				{ "name": "Node", "level": 60 },
+				{ "name": "Next", "level": 50 },
+				{ "name": "Express", "level": 40 }
+			]
+		},
+		{
+			"group_name": "Tools & Software",
+			"list_of_abilities": [
+				{ "name": "Gulp, Webpack", "level": 90 },
+				{ "name": "Git", "level": 80 },
+				{ "name": "Adobe Suite", "level": 50 },
+				{ "name": "Avocode", "level": 40 },
+				{ "name": "Figma", "level": 40 }
+			]
+		}
+	]
+}

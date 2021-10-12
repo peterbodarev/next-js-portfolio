@@ -4,9 +4,9 @@ import { GoLocation } from 'react-icons/go';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 
-const { contactInfo } = require('../data/fetchedData.json');
+import { ContactInfo } from '../types';
 
-const Sidebar = () => {
+const Sidebar = (contactInfo: ContactInfo) => {
 	const { theme, setTheme } = useTheme();
 
 	const changeTheme = () => {

@@ -1,0 +1,155 @@
+{
+	"githubReadmeUrls": [
+		"https://github.com/peterbodarev/sweet-memories/blob/master/README.md",
+		"https://github.com/peterbodarev/agency/blob/master/README.md",
+
+		"https://github.com/peterbodarev/webpack-with-gulp-config/blob/master/README.md",
+		"https://github.com/peterbodarev/gulp-config/blob/master/README.md",
+
+		"https://github.com/peterbodarev/full-screen-adaptive-site/blob/master/README.md",
+		"https://github.com/peterbodarev/animate-blocks-in-viewport/blob/master/README.md",
+		"https://github.com/peterbodarev/img-map-content-lazy-loaded/blob/master/README.md",
+		"https://github.com/peterbodarev/Matthew-Wagnerfield-parallax/blob/master/README.md",
+		"https://github.com/peterbodarev/Mountain-parallax/blob/master/README.md",
+		"https://github.com/peterbodarev/parallax-on-scroll-and-mousemove/blob/master/README.md",
+		"https://github.com/peterbodarev/slick-slider-gallery/blob/master/README.md",
+		"https://github.com/peterbodarev/swiper-slider-full-screen-page-navigation/blob/master/README.md",
+
+		"https://github.com/peterbodarev/burger-menu/blob/master/README.md",
+		"https://github.com/peterbodarev/dropdown-menu/blob/master/README.md",
+		"https://github.com/peterbodarev/cross-device-js-burger-menu/blob/master/README.md",
+		"https://github.com/peterbodarev/popups-js-and-nojs-versions/blob/master/README.md",
+		"https://github.com/peterbodarev/simple-and-media-spoilers/blob/master/README.md",
+
+		"https://github.com/peterbodarev/full-screen-blocks-with-parallax/blob/master/README.md",
+		"https://github.com/peterbodarev/html-css-browser-game/blob/master/README.md",
+
+		"https://github.com/peterbodarev/html-block-out-of-container/blob/master/README.md",
+		"https://github.com/peterbodarev/button-freedom/blob/master/README.md",
+		"https://github.com/peterbodarev/circular-html-css-timer/blob/master/README.md",
+		"https://github.com/peterbodarev/how-to-use-images-on-site/blob/master/README.md",
+		"https://github.com/peterbodarev/responsive-site-using-flexbox/blob/master/README.md",
+		"https://github.com/peterbodarev/responsive-site-using-grid/blob/master/README.md",
+		"https://github.com/peterbodarev/ways-to-use-videos-on-site/blob/master/README.md",
+		"https://github.com/peterbodarev/wave-button/blob/master/README.md"
+	],
+	"categories": [
+		{ "category": "HTML5", "toSearch": ["html"] },
+		{ "category": "SASS", "toSearch": ["sass", "scss"] },
+		{ "category": "CSS3", "toSearch": ["css"] },
+		{
+			"category": "JavaScript",
+			"toSearch": ["javascript"]
+		},
+		{
+			"category": "TypeScript",
+			"toSearch": ["typescript"]
+		},
+		{ "category": "jQuery", "toSearch": ["jquery"] },
+		{ "category": "React", "toSearch": ["react"] },
+		{ "category": "Redux", "toSearch": ["redux"] },
+		{ "category": "Next", "toSearch": ["next"] },
+		{ "category": "Express", "toSearch": ["express"] },
+		{
+			"category": "MERN",
+			"toSearch": [
+				"mern",
+				"mongoexpressreactnode",
+				"mongo,express,react,node",
+				"mongo-express-react-node"
+			]
+		},
+		{ "category": "Node", "toSearch": ["node"] },
+		{
+			"category": "JWT",
+			"toSearch": ["jwt", "jsonwebtoken", "json-web-token"]
+		},
+		{ "category": "MongoDB", "toSearch": ["mongo"] },
+		{ "category": "Tailwind", "toSearch": ["tailwind"] },
+		{
+			"category": "Material UI",
+			"toSearch": ["materialui", "mui"]
+		},
+		{
+			"category": "Styled Components",
+			"toSearch": ["styledcomponents"]
+		},
+		{ "category": "Webpack", "toSearch": ["webpack"] },
+		{ "category": "Gulp", "toSearch": ["gulp"] }
+	],
+	"setsOfCategories": [
+		{
+			"category": "Full stack",
+			"toSearch": ["MERN", "Next"],
+			"ignoreProjectWithName": []
+		},
+		{
+			"category": "Front-end",
+			"toSearch": [
+				"HTML5",
+				"CSS3",
+				"SASS",
+				"jQuery",
+				"JavaScript",
+				"TypeScript",
+				"React",
+				"Redux",
+				"Tailwind",
+				"Styled Components",
+				"Material UI"
+			],
+			"ignoreProjectWithName": ["Gulp config", "Webpack with gulp config"]
+		},
+		{
+			"category": "Back-end",
+			"toSearch": ["MongoDB", "Node", "Next", "Express"],
+			"ignoreProjectWithName": ["Gulp config", "Webpack with gulp config"]
+		}
+	],
+	"nameForAll": "All",
+	"allNavLinks": [
+		{
+			"linkName": "Layer",
+			"categories": ["Full stack", "Front-end", "Back-end"]
+		},
+		{
+			"linkName": "Language",
+			"categories": [
+				"HTML5",
+				"CSS3",
+				"SASS",
+				"jQuery",
+				"JavaScript",
+				"TypeScript"
+			]
+		},
+		{
+			"linkName": "Framework",
+			"categories": ["React", "Redux", "Next", "Express"]
+		},
+		{
+			"linkName": "Stack",
+			"categories": ["MERN"]
+		},
+		{
+			"linkName": "Engine",
+			"categories": ["Node"]
+		},
+		{
+			"linkName": "Auth",
+			"categories": ["JWT"]
+		},
+		{
+			"linkName": "DB",
+			"categories": ["MongoDB"]
+		},
+		{
+			"linkName": "Style framework",
+			"categories": ["Tailwind", "Styled Components", "Material UI"]
+		},
+		{
+			"linkName": "Bundler",
+			"categories": ["Webpack", "Gulp"]
+		}
+	]
+}

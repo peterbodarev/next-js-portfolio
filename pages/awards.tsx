@@ -9,17 +9,12 @@ import { createContext, useState } from 'react';
 
 import AwardCard from '../components/AwardCard';
 import AwardsNavbar from '../components/AwardsNavbar';
-import { Award } from '../types';
+import { Award, AwardsPageData } from '../types';
 
 export const ShowAwardDetailContext = createContext(null);
 
-const Awards: NextPage = () => {
-	const { siteConfig } = require('../data/fetchedData.json');
-	const bodyData = siteConfig.pages.awards.data.body;
-	const awardsData = bodyData.finalData;
-	const mainNavItems = bodyData.mainNavItems;
-
-	const [awards, setAwards] = useState(awardsData);
+const Awards: NextPage<AwardsPageData> = ({ mainNavItems, awardList }) => {
+	const [awards, setAwards] = useState(awardList);
 	const [active, setActive] = useState(mainNavItems[0]);
 
 	const [showDetail, setShowDetailState] = useState('');
@@ -29,12 +24,12 @@ const Awards: NextPage = () => {
 
 	const handlerFilterCategory = (category: string) => {
 		if (category === mainNavItems[0]) {
-			setAwards(awardsData);
+			setAwards(awardList);
 			setActive(category);
 			return;
 		}
 
-		const newArray = awardsData.filter((award: Award) =>
+		const newArray = awardList.filter((award: Award) =>
 			award.category.includes(category)
 		);
 		setAwards(newArray);
@@ -67,3 +62,23 @@ const Awards: NextPage = () => {
 };
 
 export default Awards;
+
+export async function getStaticProps() {
+	const baseUrl =
+		'https://raw.githubusercontent.com/peterbodarev/portfolioConfig/master/';
+
+	const contactInfo = await fetch(baseUrl + 'contactInfo.json').then(
+		(response) => response.json()
+	);
+
+	const pageData = await fetch(baseUrl + 'awards.json').then((response) =>
+		response.json()
+	);
+
+	return {
+		props: {
+			contactInfo,
+			pageData,
+		},
+	};
+}
