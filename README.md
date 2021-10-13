@@ -2,7 +2,7 @@
 
 ## Description
 
-Full stack web application witch automatically fetch github projects using SSR (Server-Side Rendering) with Next, React and TypeScript, styled with Tailwind.
+Full stack web application which automatically fetch GitHub projects using SSR (Server-Side Rendering) with Next, React and TypeScript, styled with Tailwind
 
 ## Examples 👁️
 
