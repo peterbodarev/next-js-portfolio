@@ -1,8 +1,8 @@
-# NextJS Portfolio ⇒ [Demo](link)
+# NextJS Portfolio ⇒ [Demo](https://peter-bodarev.vercel.app/)
 
 ## Description
 
-Full stack web application witch automatically fetch github projects using SSR (Server-Side Rendering) with Next, React, Material UI, Tailwind and TypeScript.
+Full stack web application witch automatically fetch github projects using SSR (Server-Side Rendering) with Next, React and TypeScript, styled with Tailwind.
 
 ## Examples 👁️
 
